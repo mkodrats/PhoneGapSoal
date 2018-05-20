@@ -158,8 +158,8 @@ var i = 1
                     pertanyaan = pertanyaan.substring(0, 5);
                 if (pertanyaan == 'https') {
                     res += "<div  class='card-body'>" +
-                        "<img src='"+value.pertanyaan +"' class='img-fluid' alt=''>"
-                        //  "<p  style='text-align: justify' class='card-text'>" + i +" "+ value.pertanyaan + "</p>"+
+                        // "<p  style='text-align: justify' class='card-text'>" + i +"</p>"+
+                        ""+i+"<img src='"+value.pertanyaan +"' class='img-fluid' alt=''><br>"+
                          "<input type='hidden' id='id' value='"+value.id+"' >"+
                          "<input id='jaw"+i+"' type='radio' name='soal"+i+"' value='a"+value.id+"'> A. "+value.opsi_a+"<br>" +
                          "<input id='jaw"+i+"' type='radio' name='soal"+i+"' value='b"+value.id+"'> B. "+value.opsi_b+"<br>" +
