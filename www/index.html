@@ -27,7 +27,8 @@
     <meta name="msapplication-tap-highlight" content="no" />
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
     <!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
-    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' gap:; style-src 'self' 'unsafe-inline'; media-src *" />
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' gap:; style-src 'self' 'unsafe-inline'; media-src *"
+    />
     <meta name=”viewport” content=”initial-scale=1, width=device-width, height=device-height, viewport-fit=cover”>
     <!-- Good default declaration:
     * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
@@ -39,26 +40,57 @@
     -->
     <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <title>Hello World</title>
+    <title>Ujian Nasional</title>
 </head>
-<body>
-    <nav  class="navbar navbar-expand-lg navbar-dark bg-primary">
+
+<body style=" background-color: #706fd3">
+    <nav class="navbar navbar-expand-lg navbar-dark " style="background-color: #706fd3">
         <a class="navbar-brand text-center" href="#">Ujian Nasional</a>
     </nav>
-    <div class="container" style="margin-top:70px">
+    <div class="container" style="margin-top:30px">
         <div class="row">
-            <div class="col text-center"  style="margin-top:30px">
-                <button style="background-color:#a29bfe;height:100px" class="col-sm-3 btn btn-primary" id="indonesia">Bahasa Indonsia </button>
+            <div class="col text-center" >
+                <center>
+                    <div class="card text-light" style="width: 18rem; box-shadow: 2px 2px #fafafa; background-color: #ffb142">
+                        <div class="card-body">
+                            <h5 class="card-title">Bahasa Indonesia</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <button id="indonesia" class="btn btn-primary">Mulai</button>
+                        </div>
+                    </div>
+                </center>
+                <!-- <button style="background-color:#a29bfe;height:100px" class="col-sm-3 btn btn-primary" id="indonesia">Bahasa Indonsia </button> -->
             </div>
         </div>
         <div class="row">
-            <div class="col text-center" style="margin-top:30px">
-                <button style="background-color:#a29bfe;height:100px" class="col-sm-3 btn btn-primary" id="inggris">Bahasa Inggris </button>
+            <div class="col text-center" style="margin-top:20px">
+                <center>
+                    <div class="card text-light" style="width: 18rem; box-shadow: 2px 2px #fafafa; background-color: #33d9b2">
+                        <div class="card-body">
+                            <h5 class="card-title">Bahasa Inggris</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <button id="inggris" class="btn btn-primary">Mulai</button>
+                        </div>
+                    </div>
+                </center>
+                <!-- <button style="background-color:#a29bfe;height:100px" class="col-sm-3 btn btn-primary" id="inggris">Bahasa Inggris </button> -->
             </div>
         </div>
         <div class="row">
-            <div class="col text-center" style="margin-top:30px" >
-                <button style="background-color:#a29bfe;height:100px" class="col-sm-3 btn btn-primary" id="matematika">Matematika</button>
+            <div class="col text-center" style="margin-top:30px; margin-bottom: 30px">
+                    <center>
+                            <div class="card text-light" style="width: 18rem; box-shadow: 2px 2px #fafafa; background-color: #ff5252">
+                              <div class="card-body">
+                                <h5 class="card-title">Matematika</h5>
+                                <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <button  id="matematika" class="btn btn-primary">Mulai</button>
+                              </div>
+                            </div>
+                        </center>
+                <!-- <button style="background-color:#a29bfe;height:100px" class="col-sm-3 btn btn-primary" id="matematika">Matematika</button> -->
             </div>
         </div>
 
@@ -72,21 +104,74 @@
         $.support.cors = true;
         var url = 'https://ancient-brook-33034.herokuapp.com/';
         var key;
-        $('#indonesia').click(function () { 
+        var soal  = localStorage.getItem('soal');
+        var soal1 = localStorage.getItem('soal1');
+        var soal2 = localStorage.getItem('soal2');
+
+        if (soal != null && soal1 != null && soal2 != null) {
+            alert('All Course Completed')
+        }
+      
+        // console.log(soal);
+
+        if (soal == 'indonesia' || soal == 'inggris' || soal == 'matematika') {
+            if (soal == 'indonesia') {
+                $('#indonesia').attr('disabled', true)
+            }
+            if (soal == 'inggris') {
+                $('#inggris').attr('disabled', true)
+            }
+            if (soal == 'matematika') {
+                $('#matematika').attr('disabled', true)
+            }
+        }
+        if (soal1 == 'indonesia' || soal1 == 'inggris' || soal1 == 'matematika') {
+            if (soal == 'indonesia') {
+                $('#indonesia').attr('disabled', true)
+            }
+            if (soal1 == 'inggris') {
+                $('#inggris').attr('disabled', true)
+            }
+            if (soal1 == 'matematika') {
+                $('#matematika').attr('disabled', true)
+            }
+        }
+        if (soal2 == 'indonesia' || soal2 == 'inggris' || soal2 == 'matematika') {
+            if (soal2 == 'indonesia') {
+                $('#indonesia').attr('disabled', true)
+            }
+            if (soal2 == 'inggris') {
+                $('#inggris').attr('disabled', true)
+            }
+            if (soal2 == 'matematika') {
+                $('#matematika').attr('disabled', true)
+            }
+        }
+        
+        $('#indonesia').click(function () {
             key = 'indonesia'
-            localStorage.setItem("key",key);
-            window.location.href = 'soal.html';   
+            if (localStorage.getItem('soal') == null) {
+                localStorage.setItem("key", key);
+                window.location.href = 'soal.html';
+            }else {
+                localStorage.setItem('soal', soal);
+                window.location.href = 'soal.html';
+            }
+            
         });
-        $('#inggris').click(function () { 
+        $('#inggris').click(function () {
             key = 'inggris'
-            localStorage.setItem("key",key); 
+            localStorage.setItem("key", key);
             window.location.href = 'soal.html';
         });
-        $('#matematika').click(function () { 
+        $('#matematika').click(function () {
             key = 'matematika'
-            localStorage.setItem("key",key);  
+            localStorage.setItem("key", key);
             window.location.href = 'soal.html';
         });
+
+
+
     </script>
 </body>
 

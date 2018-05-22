@@ -129,6 +129,7 @@
                </div>
              </div>                       
        </div>
+      
                       
 <script src="js/jquery.min.js"></script>
     <script src="js/jquery-ias.min.js"></script>
@@ -144,7 +145,6 @@
 var key =  localStorage.getItem('key');
 var res = ''
 var i = 1
-var Baseurl = 'https://ancient-brook-33034.herokuapp.com/';
     $.ajax({
         type: "GET",
         url: "https://ancient-brook-33034.herokuapp.com/soal.php",
@@ -154,16 +154,76 @@ var Baseurl = 'https://ancient-brook-33034.herokuapp.com/';
             arr  = JSON.parse(data);
            
             $.each(arr, function (key, value) {
-                
-                res += "<div  class='card-body'>" +
-                         "<p  style='text-align: justify' class='card-text'>" + i +" "+ value.pertanyaan + "</p>"+
-                         "<input type='hidden' id='id"+i+"' value='"+value.id+"' >"+
-                         "<input id='jaw"+i+"' type='radio' name='soal"+i+"' value='a'> A. "+value.opsi_a+"<br>" +
-                         "<input id='jaw"+i+"' type='radio' name='soal"+i+"' value='b'> B. "+value.opsi_b+"<br>" +
-                         "<input id='jaw"+i+"' type='radio' name='soal"+i+"' value='c'> C. "+value.opsi_c+"<br>" +
-                         "<input id='jaw"+i+"' type='radio' name='soal"+i+"' value='d'> D. "+value.opsi_d+"<br>" +
-                         "<input id='jaw"+i+"' type='radio' name='soal"+i+"' value='e'> E. "+value.opsi_e+"<br>" + "<hr>" +
+                var pertanyaan = value.pertanyaan;
+                    pertanyaan = pertanyaan.substring(0, 5);
+                    opsi_a     = value.opsi_a;
+                    opsi_a     = opsi_a.substring(0, 5);
+                    console.log(opsi_a);
+                    
+                    opsi_b     = value.opsi_b;
+                    opsi_b     = opsi_b.substring(0, 5);
+                    opsi_c     = value.opsi_c;
+                    opsi_c     = opsi_c.substring(0, 5);
+                    opsi_d     = value.opsi_d;
+                    opsi_d     = opsi_d.substring(0, 5);
+                    opsi_e     = value.opsi_e;
+                    opsi_e     = opsi_e.substring(0, 5);
+                if (pertanyaan == 'https') {
+                    res += "<div  class='card-body'>" +
+                        // "<p  style='text-align: justify' class='card-text'>" + i +"</p>"+
+                        ""+i+"<img src='"+value.pertanyaan +"' class='img-fluid' alt=''><br>"+
+                         "<input type='hidden' id='id' value='"+value.id+"' >"+
+                         "<input id='jaw"+i+"' type='radio' name='soal"+i+"' value='a"+value.id+"'> A. "+value.opsi_a+"<br>" +
+                         "<input id='jaw"+i+"' type='radio' name='soal"+i+"' value='b"+value.id+"'> B. "+value.opsi_b+"<br>" +
+                         "<input id='jaw"+i+"' type='radio' name='soal"+i+"' value='c"+value.id+"'> C. "+value.opsi_c+"<br>" +
+                         "<input id='jaw"+i+"' type='radio' name='soal"+i+"' value='d"+value.id+"'> D. "+value.opsi_d+"<br>" +
+                         "<input id='jaw"+i+"' type='radio' name='soal"+i+"' value='e"+value.id+"'> E. "+value.opsi_e+"<br>" + "<hr>" +
                          "</div>"
+                }else if (pertanyaan == 'https' && opsi_a == 'https' && opsi_b == 'https' && opsi_c == 'https' && opsi_d == 'https' && opsi_e == 'https') {
+                    res += "<div  class='card-body'>" +
+                        ""+i+"<img src='"+value.pertanyaan +"' class='img-fluid' alt=''><br>"+
+                         "<input type='hidden' id='id' value='"+value.id+"' >"+
+                         "<input id='jaw"+i+"' type='radio' name='soal"+i+"' value='a"+value.id+"'> A. <img src='"+value.opsi_a +"' class='img-fluid' alt=''><br>" +
+                         "<input id='jaw"+i+"' type='radio' name='soal"+i+"' value='b"+value.id+"'> B. <img src='"+value.opsi_b +"' class='img-fluid' alt=''><br>" +
+                         "<input id='jaw"+i+"' type='radio' name='soal"+i+"' value='c"+value.id+"'> C. <img src='"+value.opsi_c +"' class='img-fluid' alt=''><br>" +
+                         "<input id='jaw"+i+"' type='radio' name='soal"+i+"' value='d"+value.id+"'> D. <img src='"+value.opsi_d +"' class='img-fluid' alt=''><br>" +
+                         "<input id='jaw"+i+"' type='radio' name='soal"+i+"' value='e"+value.id+"'> E. <img src='"+value.opsi_e +"' class='img-fluid' alt=''><br>" + "<hr>" +
+                         "</div>"
+                }else if (pertanyaan != 'https' && opsi_a == 'https' && opsi_b == 'https' && opsi_c == 'https' && opsi_d == 'https' && opsi_e == 'https') {
+                    res += "<div  class='card-body'>" +
+                        ""+i+"<img src='"+value.pertanyaan +"' class='img-fluid' alt=''><br>"+
+                         "<input type='hidden' id='id' value='"+value.id+"' >"+
+                         "<input id='jaw"+i+"' type='radio' name='soal"+i+"' value='a"+value.id+"'> A. <img src='"+value.opsi_a +"' class='img-fluid' alt=''><br>" +
+                         "<input id='jaw"+i+"' type='radio' name='soal"+i+"' value='b"+value.id+"'> B. <img src='"+value.opsi_b +"' class='img-fluid' alt=''><br>" +
+                         "<input id='jaw"+i+"' type='radio' name='soal"+i+"' value='c"+value.id+"'> C. <img src='"+value.opsi_c +"' class='img-fluid' alt=''><br>" +
+                         "<input id='jaw"+i+"' type='radio' name='soal"+i+"' value='d"+value.id+"'> D. <img src='"+value.opsi_d +"' class='img-fluid' alt=''><br>" +
+                         "<input id='jaw"+i+"' type='radio' name='soal"+i+"' value='e"+value.id+"'> E. <img src='"+value.opsi_e +"' class='img-fluid' alt=''><br>" + "<hr>" +
+                         "</div>"
+                }
+                else if (pertanyaan == 'https' && opsi_a == 'https' && opsi_b == 'https' && opsi_c == 'https' && opsi_d == 'https' && opsi_e == 'https') {
+                    res += "<div  class='card-body'>" +
+                        ""+i+"<img src='"+value.pertanyaan +"' class='img-fluid' alt=''><br>"+
+                         "<input type='hidden' id='id' value='"+value.id+"' >"+
+                         "<input id='jaw"+i+"' type='radio' name='soal"+i+"' value='a"+value.id+"'> A. <img src='"+value.opsi_a +"' class='img-fluid' alt=''><br>" +
+                         "<input id='jaw"+i+"' type='radio' name='soal"+i+"' value='b"+value.id+"'> B. <img src='"+value.opsi_b +"' class='img-fluid' alt=''><br>" +
+                         "<input id='jaw"+i+"' type='radio' name='soal"+i+"' value='c"+value.id+"'> C. <img src='"+value.opsi_c +"' class='img-fluid' alt=''><br>" +
+                         "<input id='jaw"+i+"' type='radio' name='soal"+i+"' value='d"+value.id+"'> D. <img src='"+value.opsi_d +"' class='img-fluid' alt=''><br>" +
+                         "<input id='jaw"+i+"' type='radio' name='soal"+i+"' value='e"+value.id+"'> E. <img src='"+value.opsi_e +"' class='img-fluid' alt=''><br>" + "<hr>" +
+                         "</div>"
+                }
+                else{
+                    res += "<div  class='card-body'>" +
+                         "<p  style='text-align: justify' class='card-text'>" + i +" "+ value.pertanyaan + "</p>"+
+                         "<input type='hidden' id='id' value='"+value.id+"' >"+
+                         "<input id='jaw"+i+"' type='radio' name='soal"+i+"' value='a"+value.id+"'> A. "+value.opsi_a+"<br>" +
+                         "<input id='jaw"+i+"' type='radio' name='soal"+i+"' value='b"+value.id+"'> B. "+value.opsi_b+"<br>" +
+                         "<input id='jaw"+i+"' type='radio' name='soal"+i+"' value='c"+value.id+"'> C. "+value.opsi_c+"<br>" +
+                         "<input id='jaw"+i+"' type='radio' name='soal"+i+"' value='d"+value.id+"'> D. "+value.opsi_d+"<br>" +
+                         "<input id='jaw"+i+"' type='radio' name='soal"+i+"' value='e"+value.id+"'> E. "+value.opsi_e+"<br>" + "<hr>" +
+                         "</div>"
+                }
+                
+               
                 i++;
              });
 
@@ -176,27 +236,46 @@ var Baseurl = 'https://ancient-brook-33034.herokuapp.com/';
 
     $('#selesai').click(function () { 
         $('#ext-version').remove();
-        var soal = localStorage.getItem('key');  
-        
-        $('input:hidden').each(function () { 
-            var a = $('form').serialize()
-            console.log(a);
-            
+        var idSoal = localStorage.getItem('key');   
+        var soal = [];
+
+        $('input:checked').each(function () { 
+            var data   = $(this).val();
+                jwb    = data.substring(0,1);
+                id = data.substring(1); 
+
+            var data = {
+                soal: idSoal,
+                id  : id,
+                jwb : jwb
+            }
+            soal.push(data); 
          })
+            soal = JSON.stringify(soal);
+            console.log(soal);
+            $.ajax({
+                type: "POST",
+                url: "https://ancient-brook-33034.herokuapp.com/jawab.php",
+                data: soal,
+                success: function (response) {
+                    console.log(response);
+                    
+                   var data = JSON.parse(response);
+                   var total_soal    = data['total_soal'];
+                   var hasil         = data['hasil'];
+                   var soal_dijawab  = data['soal_dijawab'];
+                   var jawaban_benar = data['jawaban_benar'];
 
-        $('input:radio:checked').each(function() {
-            var data = $('form').serialize();   
-           $.ajax({
-               type: "GET",
-               url: 'https://ancient-brook-33034.herokuapp.com/jawab.php',
-               data: {data, key},
-               success: function (response) {
-                   console.log(response);
-               }
-           });
-                
-        });
-
+                   localStorage.setItem("hasil",hasil);
+                   localStorage.setItem("soal_dijawab",soal_dijawab);
+                   localStorage.setItem("jawaban_benar",jawaban_benar);
+                   localStorage.setItem("total_soal",total_soal);
+                    
+                   window.location.href = 'hasil.html'
+                       
+                }
+            });   
+        })
     
 
         
@@ -221,7 +300,7 @@ var Baseurl = 'https://ancient-brook-33034.herokuapp.com/';
     //     }
   
        
-    });
+    // });
    
 </script>
 
