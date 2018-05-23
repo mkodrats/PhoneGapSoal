@@ -1,4 +1,4 @@
-#Mon May 21 02:55:20 WIB 2018
-base.0=/Users/light/Sites/skrip/platforms/android/app/build/intermediates/transforms/dexMerger/debug/99
+#Wed May 23 00:15:02 WIB 2018
+base.0=/Users/light/Sites/skrip/platforms/android/app/build/intermediates/transforms/dexMerger/debug/118
 path.0=classes.dex
 renamed.0=classes.dex

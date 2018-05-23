@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <instant-run
-    abi="x86"
-    api-level="23"
-    build-mode="FULL"
-    density="xxhdpi"
+    abi="arm64-v8a,armeabi-v7a,armeabi"
+    api-level="25"
+    build-mode="COLD"
+    density="xhdpi"
     format="10"
     plugin-version="3.0.1"
-    timestamp="1526846097710"
+    timestamp="1527009981813"
     token="-2630926559797417755"
-    verifier="FULL_BUILD_REQUESTED" >
+    verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
@@ -18,57 +18,17 @@
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="3275" />
+        duration="0" />
     <task
         name="verifier"
         duration="0" />
 
-    <artifact
-        location="/Users/light/Sites/skrip/platforms/android/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
-        type="SPLIT" />
-    <artifact
-        location="/Users/light/Sites/skrip/platforms/android/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
-        type="SPLIT" />
-    <artifact
-        location="/Users/light/Sites/skrip/platforms/android/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
-        type="SPLIT" />
-    <artifact
-        location="/Users/light/Sites/skrip/platforms/android/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
-        type="SPLIT" />
-    <artifact
-        location="/Users/light/Sites/skrip/platforms/android/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
-        type="SPLIT" />
-    <artifact
-        location="/Users/light/Sites/skrip/platforms/android/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
-        type="SPLIT" />
-    <artifact
-        location="/Users/light/Sites/skrip/platforms/android/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
-        type="SPLIT" />
-    <artifact
-        location="/Users/light/Sites/skrip/platforms/android/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
-        type="SPLIT" />
-    <artifact
-        location="/Users/light/Sites/skrip/platforms/android/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
-        type="SPLIT" />
-    <artifact
-        location="/Users/light/Sites/skrip/platforms/android/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
-        type="SPLIT" />
-    <artifact
-        location="/Users/light/Sites/skrip/platforms/android/app/build/outputs/apk/debug/app-debug.apk"
-        type="SPLIT_MAIN" />
-    <artifact
-        location="/Users/light/Sites/skrip/platforms/android/app/build/intermediates/split-apk/debug/dep/dependencies.apk"
-        type="SPLIT" />
-
     <build
         build-mode="FULL"
-        timestamp="1526846097710"
+        timestamp="1527009268476"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
-            location="/Users/light/Sites/skrip/platforms/android/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/light/Sites/skrip/platforms/android/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
+            location="/Users/light/Sites/skrip/platforms/android/app/build/intermediates/split-apk/debug/dep/dependencies.apk"
             type="SPLIT" />
         <artifact
             location="/Users/light/Sites/skrip/platforms/android/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
@@ -77,29 +37,44 @@
             location="/Users/light/Sites/skrip/platforms/android/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
             type="SPLIT" />
         <artifact
-            location="/Users/light/Sites/skrip/platforms/android/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
+            location="/Users/light/Sites/skrip/platforms/android/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
+            type="SPLIT" />
+        <artifact
+            location="/Users/light/Sites/skrip/platforms/android/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
             type="SPLIT" />
         <artifact
             location="/Users/light/Sites/skrip/platforms/android/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
             type="SPLIT" />
         <artifact
-            location="/Users/light/Sites/skrip/platforms/android/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
-            type="SPLIT" />
-        <artifact
             location="/Users/light/Sites/skrip/platforms/android/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
             type="SPLIT" />
         <artifact
-            location="/Users/light/Sites/skrip/platforms/android/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
+            location="/Users/light/Sites/skrip/platforms/android/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
+            type="SPLIT" />
+        <artifact
+            location="/Users/light/Sites/skrip/platforms/android/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
             type="SPLIT" />
         <artifact
             location="/Users/light/Sites/skrip/platforms/android/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
             type="SPLIT" />
         <artifact
+            location="/Users/light/Sites/skrip/platforms/android/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
+            type="SPLIT" />
+        <artifact
             location="/Users/light/Sites/skrip/platforms/android/app/build/outputs/apk/debug/app-debug.apk"
             type="SPLIT_MAIN" />
-        <artifact
-            location="/Users/light/Sites/skrip/platforms/android/app/build/intermediates/split-apk/debug/dep/dependencies.apk"
-            type="SPLIT" />
     </build>
+    <build
+        build-mode="COLD"
+        timestamp="1527009737590"
+        verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="/Users/light/Sites/skrip/platforms/android/app/build/outputs/apk/debug/app-debug.apk"
+            type="SPLIT_MAIN" />
+    </build>
+    <build
+        build-mode="COLD"
+        timestamp="1527009981813"
+        verifier="COLD_SWAP_REQUESTED" />
 
 </instant-run>

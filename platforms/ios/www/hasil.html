@@ -9,59 +9,53 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
 
-<body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+<body style="background-color: #706fd3">
+    <nav class="navbar navbar-expand-lg navbar-dark " style="background-color: #706fd3">
         <a class="navbar-brand" href="#">Hasil</a>
     </nav>
-    <div class="container text-center" style="margin-top:40px">
-        <div class="row">
+    <div class="container" style="margin-top:10px" >
+        <div class="row alert alert-secondary" style="margin:1%">
             <div class="col">
-                <h2>Nilai :</h2>
+                <span class="align-middle">Nilai</span>
             </div>
             <div class="col">
-                <h2 id="nilai">90</h2>
-            </div>
-        </div>
-        <div class="row" style="margin-top:50px">
-            <div class="col">
-                <h3>Benar</h3>
-            </div>
-            <div class="col">
-                <h2 id="benar">90</h2>
+                <span id="nilai" class="align-middle">90</span>
             </div>
         </div>
-        <div class="row" style="margin-top:50px">
+        <div class="row alert alert-secondary" style="margin:1%">
             <div class="col">
-                <h3>Benar</h3>
+                <span class="align-middle">Soal Di jawab</span>
             </div>
             <div class="col">
-                <h2>90</h2>
+            <span class="align-middle" id="jawab">90</s>
             </div>
         </div>
-        <div class="row" style="margin-top:50px">
+        <div class="row alert alert-secondary" style="margin:1%;">
             <div class="col">
-                <h3>Benar</h3>
+                <span class="align-middle">Benar</span>
             </div>
-            <div class="col">
-                <h2>90</h2>
+            <div class="col ">
+                <span class="align-middle" id="benar">90</span>
             </div>
+            
         </div>
         <div class="row">
             <div class="col text-center" style="margin-top:10px">
-                <button class="col-sm-2 btn btn-primary">Ulang</button>
+                <button class="col-sm-2 btn-lg btn-warning" id="menu">Menu Utama</button>
             </div>
         </div>
-        <div class="row">
+        <!-- <div class="row">
             <div class="col text-center" style="margin-top:10px">
-                <button class="col-sm-2 btn btn-primary">Lanjut</button>
+                <button class="col-sm-2 btn btn-success">Lanjut</button>
             </div>
-        </div>
+        </div> -->
     </div>
 <script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 </body>
 </html>
 <script>
+    var soal          = localStorage.getItem('key');
     var hasil         = localStorage.getItem('hasil');
     var jawaban_benar = localStorage.getItem('jawaban_benar');
     var soal_dijawab  = localStorage.getItem('soal_dijawab');
@@ -69,9 +63,29 @@
     
     $('#benar').text(jawaban_benar);
     $('#nilai').text(hasil);
-    $('#benar').text(jawaban_benar);
+    $('#jawab').text(soal_dijawab);
     $('#benar').text(jawaban_benar);
     
+    $('#menu').click(function () { 
+        window.location.href = 'index.html';
+        var key  = localStorage.getItem('key');
+        var soal = localStorage.getItem('soal');
+        var soal1 = localStorage.getItem('soal1');
+        var soal2 = localStorage.getItem('soal2');
+        // console.log(soal);
+        
+        // localStorage.clear();
+        if (soal == null) {
+            localStorage.setItem('soal', key);
+        }
+        if (soal1 == null && soal != null) {
+            localStorage.setItem('soal1', key);
+        }
+        if (soal2 == null && soal != null && soal1 != null) {
+            localStorage.setItem('soal2', key);
+        }
+        
+    });
 
     // localStorage.clear();
 </script>
