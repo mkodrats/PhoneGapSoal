@@ -77,12 +77,15 @@
         // localStorage.clear();
         if (soal == null) {
             localStorage.setItem('soal', key);
+            localStorage.setItem(key, hasil);
         }
         if (soal1 == null && soal != null) {
             localStorage.setItem('soal1', key);
+            localStorage.setItem(key, hasil);
         }
         if (soal2 == null && soal != null && soal1 != null) {
             localStorage.setItem('soal2', key);
+            localStorage.setItem(key, hasil);
         }
         
     });

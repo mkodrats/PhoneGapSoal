@@ -108,10 +108,8 @@
       
                       
 <script src="js/jquery.min.js"></script>
-    <script src="js/jquery-ias.min.js"></script>
 <!--<script src="js/bootstrap.min.js"></script>-->
 <script>
-   $(document).ready(function() {
     window.onload = function() {
             var fiveMinutes = 60*60,
             display = document.querySelector('#time');
@@ -122,8 +120,6 @@
 		$('body').addClass('loaded');
 		$('h1').css('color','#222222');
     }, 1000);    
-});
-
 var key =  localStorage.getItem('key');
 
 $('#section').text(key);
@@ -152,17 +148,6 @@ var i = 1
                     opsi_e     = value.opsi_e;
                     opsi_e     = opsi_e.substring(0, 5);
                 if (pertanyaan == 'https' && opsi_a == 'https' && opsi_b == 'https' && opsi_c == 'https' && opsi_d == 'https' && opsi_e == 'https') {
-                    res += "<div  class='card-body'>" +
-                        ""+i+"<img src='"+value.pertanyaan +"' class='img-fluid' alt=''><br>"+
-                         "<input type='hidden' id='id' value='"+value.id+"' >"+
-                         "<input id='jaw"+i+"' type='radio' name='soal"+i+"' value='a"+value.id+"'> A. <img src='"+value.opsi_a +"' class='img-fluid' alt=''><br>" +
-                         "<input id='jaw"+i+"' type='radio' name='soal"+i+"' value='b"+value.id+"'> B. <img src='"+value.opsi_b +"' class='img-fluid' alt=''><br>" +
-                         "<input id='jaw"+i+"' type='radio' name='soal"+i+"' value='c"+value.id+"'> C. <img src='"+value.opsi_c +"' class='img-fluid' alt=''><br>" +
-                         "<input id='jaw"+i+"' type='radio' name='soal"+i+"' value='d"+value.id+"'> D. <img src='"+value.opsi_d +"' class='img-fluid' alt=''><br>" +
-                         "<input id='jaw"+i+"' type='radio' name='soal"+i+"' value='e"+value.id+"'> E. <img src='"+value.opsi_e +"' class='img-fluid' alt=''><br>" + "<hr>" +
-                         "</div>"
-                }
-                else if (pertanyaan == 'https' && opsi_a == 'https' && opsi_b == 'https' && opsi_c == 'https' && opsi_d == 'https' && opsi_e == 'https') {
                     res += "<div  class='card-body'>" +
                         ""+i+"<img src='"+value.pertanyaan +"' class='img-fluid' alt=''><br>"+
                          "<input type='hidden' id='id' value='"+value.id+"' >"+
@@ -238,6 +223,21 @@ var i = 1
                          "<input id='jaw"+i+"' type='radio' name='soal"+i+"' value='e"+value.id+"'> E. "+value.opsi_e +"<hr>"+
                          "</div>"
                 }
+
+                else if (pertanyaan == 'https' && opsi_a != 'https' && opsi_b != 'https' && opsi_c != 'https' && opsi_d != 'https' && opsi_e != 'https') {
+                    res += "<div  class='card-body'>" +
+                        ""+i+"<img src='"+value.pertanyaan +"' class='img-fluid' alt=''><br>"+
+                         "<input type='hidden' id='id' value='"+value.id+"' >"+
+                         "<input id='jaw"+i+"' type='radio' name='soal"+i+"' value='a"+value.id+"'> A. "+value.opsi_a+"<br>" +
+                        "<input id='jaw"+i+"' type='radio' name='soal"+i+"' value='b"+value.id+"'> B. "+value.opsi_b+"<br>" +
+                        "<input id='jaw"+i+"' type='radio' name='soal"+i+"' value='c"+value.id+"'> C. "+value.opsi_c+"<br>" +
+                        "<input id='jaw"+i+"' type='radio' name='soal"+i+"' value='d"+value.id+"'> D. "+value.opsi_d+"<br>" +
+                         "<input id='jaw"+i+"' type='radio' name='soal"+i+"' value='e"+value.id+"'> E. "+value.opsi_e +"<hr>"+
+                         "</div>"
+                }   
+
+
+
                 i++;
              });
 
@@ -259,7 +259,7 @@ var i = 1
             
                 display.textContent = hours + ":" + minutes + ":" + seconds;
             
-                if (--timer < 0) {
+                if (--timer == 0) {
                    
                     $('#ext-version').remove();
         var idSoal = localStorage.getItem('key');   

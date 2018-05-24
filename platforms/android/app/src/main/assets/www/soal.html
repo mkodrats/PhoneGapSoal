@@ -158,17 +158,6 @@ var i = 1
                          "<input id='jaw"+i+"' type='radio' name='soal"+i+"' value='e"+value.id+"'> E. <img src='"+value.opsi_e +"' class='img-fluid' alt=''><br>" + "<hr>" +
                          "</div>"
                 }
-                else if (pertanyaan == 'https' && opsi_a == 'https' && opsi_b == 'https' && opsi_c == 'https' && opsi_d == 'https' && opsi_e == 'https') {
-                    res += "<div  class='card-body'>" +
-                        ""+i+"<img src='"+value.pertanyaan +"' class='img-fluid' alt=''><br>"+
-                         "<input type='hidden' id='id' value='"+value.id+"' >"+
-                         "<input id='jaw"+i+"' type='radio' name='soal"+i+"' value='a"+value.id+"'> A. <img src='"+value.opsi_a +"' class='img-fluid' alt=''><br>" +
-                         "<input id='jaw"+i+"' type='radio' name='soal"+i+"' value='b"+value.id+"'> B. <img src='"+value.opsi_b +"' class='img-fluid' alt=''><br>" +
-                         "<input id='jaw"+i+"' type='radio' name='soal"+i+"' value='c"+value.id+"'> C. <img src='"+value.opsi_c +"' class='img-fluid' alt=''><br>" +
-                         "<input id='jaw"+i+"' type='radio' name='soal"+i+"' value='d"+value.id+"'> D. <img src='"+value.opsi_d +"' class='img-fluid' alt=''><br>" +
-                         "<input id='jaw"+i+"' type='radio' name='soal"+i+"' value='e"+value.id+"'> E. <img src='"+value.opsi_e +"' class='img-fluid' alt=''><br>" + "<hr>" +
-                         "</div>"
-                }
                 else if (pertanyaan != 'https' && opsi_a == 'https' && opsi_b == 'https' && opsi_c == 'https' && opsi_d == 'https' && opsi_e == 'https') {
                     res += "<div  class='card-body'>" +
                         "<p  style='text-align: justify' class='card-text'>" + i +" "+ value.pertanyaan + "</p>"+
@@ -234,6 +223,21 @@ var i = 1
                          "<input id='jaw"+i+"' type='radio' name='soal"+i+"' value='e"+value.id+"'> E. "+value.opsi_e +"<hr>"+
                          "</div>"
                 }
+
+                else if (pertanyaan == 'https' && opsi_a != 'https' && opsi_b != 'https' && opsi_c != 'https' && opsi_d != 'https' && opsi_e != 'https') {
+                    res += "<div  class='card-body'>" +
+                        ""+i+"<img src='"+value.pertanyaan +"' class='img-fluid' alt=''><br>"+
+                         "<input type='hidden' id='id' value='"+value.id+"' >"+
+                         "<input id='jaw"+i+"' type='radio' name='soal"+i+"' value='a"+value.id+"'> A. "+value.opsi_a+"<br>" +
+                        "<input id='jaw"+i+"' type='radio' name='soal"+i+"' value='b"+value.id+"'> B. "+value.opsi_b+"<br>" +
+                        "<input id='jaw"+i+"' type='radio' name='soal"+i+"' value='c"+value.id+"'> C. "+value.opsi_c+"<br>" +
+                        "<input id='jaw"+i+"' type='radio' name='soal"+i+"' value='d"+value.id+"'> D. "+value.opsi_d+"<br>" +
+                         "<input id='jaw"+i+"' type='radio' name='soal"+i+"' value='e"+value.id+"'> E. "+value.opsi_e +"<hr>"+
+                         "</div>"
+                }   
+
+
+
                 i++;
              });
 

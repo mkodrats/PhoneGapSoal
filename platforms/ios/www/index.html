@@ -54,8 +54,8 @@
                     <div class="card text-light" style="width: 18rem; box-shadow: 2px 2px #fafafa; background-color: #ffb142">
                         <div class="card-body">
                             <h5 class="card-title">Bahasa Indonesia</h5>
-                            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <h6 class="card-subtitle mb-2 text-muted">Jumlah Soal 40</h6>
+                            <p class="card-text">Waktu 60 Menit</p>
                             <button id="indonesia" class="btn btn-primary">Mulai</button>
                         </div>
                     </div>
@@ -69,8 +69,8 @@
                     <div class="card text-light" style="width: 18rem; box-shadow: 2px 2px #fafafa; background-color: #33d9b2">
                         <div class="card-body">
                             <h5 class="card-title">Bahasa Inggris</h5>
-                            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <h6 class="card-subtitle mb-2 text-muted">Jumlah Soal 40</h6>
+                            <p class="card-text">Waktu 60 Menit</p>
                             <button id="inggris" class="btn btn-primary">Mulai</button>
                         </div>
                     </div>
@@ -79,13 +79,13 @@
             </div>
         </div>
         <div class="row">
-            <div class="col text-center" style="margin-top:30px; margin-bottom: 30px">
+            <div class="col text-center" style="margin-top:20px; margin-bottom: 20px">
                     <center>
                             <div class="card text-light" style="width: 18rem; box-shadow: 2px 2px #fafafa; background-color: #ff5252">
                               <div class="card-body">
                                 <h5 class="card-title">Matematika</h5>
-                                <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <h6 class="card-subtitle mb-2 text-muted">Jumlah Soal 40</h6>
+                                <p class="card-text">Waktu 60 Menit</p>
                                 <button  id="matematika" class="btn btn-primary">Mulai</button>
                               </div>
                             </div>
@@ -110,19 +110,20 @@
 
         if (soal != null && soal1 != null && soal2 != null) {
             alert('All Course Completed')
+            window.localStorage.clear();
         }
       
         // console.log(soal);
 
         if (soal == 'indonesia' || soal == 'inggris' || soal == 'matematika') {
             if (soal == 'indonesia') {
-                $('#indonesia').attr('disabled', true)
+                $('#indonesia').attr('hidden', true)
             }
             if (soal == 'inggris') {
-                $('#inggris').attr('disabled', true)
+                $('#inggris').attr('hidden', true)
             }
             if (soal == 'matematika') {
-                $('#matematika').attr('disabled', true)
+                $('#matematika').attr('hidden', true)
             }
         }
         if (soal1 == 'indonesia' || soal1 == 'inggris' || soal1 == 'matematika') {

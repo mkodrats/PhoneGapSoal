@@ -110,20 +110,20 @@
 
         if (soal != null && soal1 != null && soal2 != null) {
             alert('All Course Completed')
-            localStorage.clear();
+            window.localStorage.clear();
         }
       
         // console.log(soal);
 
         if (soal == 'indonesia' || soal == 'inggris' || soal == 'matematika') {
             if (soal == 'indonesia') {
-                $('#indonesia').attr('disabled', true)
+                $('#indonesia').attr('hidden', true)
             }
             if (soal == 'inggris') {
-                $('#inggris').attr('disabled', true)
+                $('#inggris').attr('hidden', true)
             }
             if (soal == 'matematika') {
-                $('#matematika').attr('disabled', true)
+                $('#matematika').attr('hidden', true)
             }
         }
         if (soal1 == 'indonesia' || soal1 == 'inggris' || soal1 == 'matematika') {
