@@ -90,7 +90,9 @@
 	setTimeout(function(){
 		$('body').addClass('loaded');
 		$('h1').css('color','#222222');
-    }, 5000);    
+    }, 5000);  
+
+
 var key =  localStorage.getItem('key');
 
 $('#section').text(key);
@@ -144,7 +146,7 @@ var i = 1
                     res += "<div  class='card-body'>" +
                          "<p  style='text-align: justify' class='card-text'>" + i +" "+ value.pertanyaan + "</p>"+
                          "<input type='hidden' id='id' value='"+value.id+"' >"+
-                        "<input id='jaw"+i+"' type='radio' name='soal"+i+"' value='a"+value.id+"'> A. "+value.opsi_a+"<br>" +
+                         "<input id='jaw"+i+"' type='radio' name='soal"+i+"' value='a"+value.id+"'> A. "+value.opsi_a+"<br>" +
                          "<input id='jaw"+i+"' type='radio' name='soal"+i+"' value='b"+value.id+"'> B. <img src='"+value.opsi_b +"' class='img-fluid' alt=''><br>" +
                          "<input id='jaw"+i+"' type='radio' name='soal"+i+"' value='c"+value.id+"'> C. <img src='"+value.opsi_c +"' class='img-fluid' alt=''><br>" +
                          "<input id='jaw"+i+"' type='radio' name='soal"+i+"' value='d"+value.id+"'> D. <img src='"+value.opsi_d +"' class='img-fluid' alt=''><br>" +
@@ -157,10 +159,10 @@ var i = 1
                          "<input type='hidden' id='id' value='"+value.id+"' >"+
                         "<input id='jaw"+i+"' type='radio' name='soal"+i+"' value='a"+value.id+"'> A. "+value.opsi_a+"<br>" +
                         "<input id='jaw"+i+"' type='radio' name='soal"+i+"' value='b"+value.id+"'> B. "+value.opsi_b+"<br>" +
-                         "<input id='jaw"+i+"' type='radio' name='soal"+i+"' value='c"+value.id+"'> C. <img src='"+value.opsi_c +"' class='img-fluid' alt=''><br>" +
-                         "<input id='jaw"+i+"' type='radio' name='soal"+i+"' value='d"+value.id+"'> D. <img src='"+value.opsi_d +"' class='img-fluid' alt=''><br>" +
-                         "<input id='jaw"+i+"' type='radio' name='soal"+i+"' value='e"+value.id+"'> E. <img src='"+value.opsi_e +"' class='img-fluid' alt=''><br>" + "<hr>" +
-                         "</div>"
+                        "<input id='jaw"+i+"' type='radio' name='soal"+i+"' value='c"+value.id+"'> C. <img src='"+value.opsi_c +"' class='img-fluid' alt=''><br>" +
+                        "<input id='jaw"+i+"' type='radio' name='soal"+i+"' value='d"+value.id+"'> D. <img src='"+value.opsi_d +"' class='img-fluid' alt=''><br>" +
+                        "<input id='jaw"+i+"' type='radio' name='soal"+i+"' value='e"+value.id+"'> E. <img src='"+value.opsi_e +"' class='img-fluid' alt=''><br>" + "<hr>" +
+                        "</div>"
                 }
                 else if (pertanyaan != 'https' && opsi_a !== 'https' && opsi_b != 'https' && opsi_c != 'https' && opsi_d == 'https' && opsi_e == 'https') {
                     res += "<div  class='card-body'>" +
@@ -168,9 +170,9 @@ var i = 1
                         "<input id='jaw"+i+"' type='radio' name='soal"+i+"' value='a"+value.id+"'> A. "+value.opsi_a+"<br>" +
                         "<input id='jaw"+i+"' type='radio' name='soal"+i+"' value='b"+value.id+"'> B. "+value.opsi_b+"<br>" +
                         "<input id='jaw"+i+"' type='radio' name='soal"+i+"' value='c"+value.id+"'> C. "+value.opsi_c+"<br>" +
-                         "<input id='jaw"+i+"' type='radio' name='soal"+i+"' value='d"+value.id+"'> D. <img src='"+value.opsi_d +"' class='img-fluid' alt=''><br>" +
-                         "<input id='jaw"+i+"' type='radio' name='soal"+i+"' value='e"+value.id+"'> E. <img src='"+value.opsi_e +"' class='img-fluid' alt=''><br>" + "<hr>" +
-                         "</div>"
+                        "<input id='jaw"+i+"' type='radio' name='soal"+i+"' value='d"+value.id+"'> D. <img src='"+value.opsi_d +"' class='img-fluid' alt=''><br>" +
+                        "<input id='jaw"+i+"' type='radio' name='soal"+i+"' value='e"+value.id+"'> E. <img src='"+value.opsi_e +"' class='img-fluid' alt=''><br>" + "<hr>" +
+                        "</div>"
                 }
                 else if (pertanyaan != 'https' && opsi_a !== 'https' && opsi_b != 'https' && opsi_c != 'https' && opsi_d != 'https' && opsi_e == 'https') {
                     res += "<div  class='card-body'>" +
@@ -180,8 +182,8 @@ var i = 1
                         "<input id='jaw"+i+"' type='radio' name='soal"+i+"' value='b"+value.id+"'> B. "+value.opsi_b+"<br>" +
                         "<input id='jaw"+i+"' type='radio' name='soal"+i+"' value='c"+value.id+"'> C. "+value.opsi_c+"<br>" +
                         "<input id='jaw"+i+"' type='radio' name='soal"+i+"' value='d"+value.id+"'> D. "+value.opsi_d+"<br>" +
-                         "<input id='jaw"+i+"' type='radio' name='soal"+i+"' value='e"+value.id+"'> E. <img src='"+value.opsi_e +"' class='img-fluid' alt=''><br>" + "<hr>" +
-                         "</div>"
+                        "<input id='jaw"+i+"' type='radio' name='soal"+i+"' value='e"+value.id+"'> E. <img src='"+value.opsi_e +"' class='img-fluid' alt=''><br>" + "<hr>" +
+                        "</div>"
                 }
                 else if (pertanyaan != 'https' && opsi_a !== 'https' && opsi_b != 'https' && opsi_c != 'https' && opsi_d != 'https' && opsi_e != 'https') {
                     res += "<div  class='card-body'>" +
@@ -191,31 +193,25 @@ var i = 1
                         "<input id='jaw"+i+"' type='radio' name='soal"+i+"' value='b"+value.id+"'> B. "+value.opsi_b+"<br>" +
                         "<input id='jaw"+i+"' type='radio' name='soal"+i+"' value='c"+value.id+"'> C. "+value.opsi_c+"<br>" +
                         "<input id='jaw"+i+"' type='radio' name='soal"+i+"' value='d"+value.id+"'> D. "+value.opsi_d+"<br>" +
-                         "<input id='jaw"+i+"' type='radio' name='soal"+i+"' value='e"+value.id+"'> E. "+value.opsi_e +"<hr>"+
-                         "</div>"
+                        "<input id='jaw"+i+"' type='radio' name='soal"+i+"' value='e"+value.id+"'> E. "+value.opsi_e +"<hr>"+
+                        "</div>"
                 }
-
                 else if (pertanyaan == 'https' && opsi_a != 'https' && opsi_b != 'https' && opsi_c != 'https' && opsi_d != 'https' && opsi_e != 'https') {
                     res += "<div  class='card-body'>" +
                         ""+i+"<img src='"+value.pertanyaan +"' class='img-fluid' alt=''><br>"+
-                         "<input type='hidden' id='id' value='"+value.id+"' >"+
-                         "<input id='jaw"+i+"' type='radio' name='soal"+i+"' value='a"+value.id+"'> A. "+value.opsi_a+"<br>" +
+                        "<input type='hidden' id='id' value='"+value.id+"' >"+
+                        "<input id='jaw"+i+"' type='radio' name='soal"+i+"' value='a"+value.id+"'> A. "+value.opsi_a+"<br>" +
                         "<input id='jaw"+i+"' type='radio' name='soal"+i+"' value='b"+value.id+"'> B. "+value.opsi_b+"<br>" +
                         "<input id='jaw"+i+"' type='radio' name='soal"+i+"' value='c"+value.id+"'> C. "+value.opsi_c+"<br>" +
                         "<input id='jaw"+i+"' type='radio' name='soal"+i+"' value='d"+value.id+"'> D. "+value.opsi_d+"<br>" +
-                         "<input id='jaw"+i+"' type='radio' name='soal"+i+"' value='e"+value.id+"'> E. "+value.opsi_e +"<hr>"+
-                         "</div>"
+                        "<input id='jaw"+i+"' type='radio' name='soal"+i+"' value='e"+value.id+"'> E. "+value.opsi_e +"<hr>"+
+                        "</div>"
                 }   
-
-
-
                 i++;
              });
-
-       $('#soal').html(res);
-
-               }
-        });
+             $('#soal').html(res);
+             }
+             });
         function startTimer(duration, display) 
         {
             var timer = duration, hours, minutes, seconds;
@@ -230,33 +226,29 @@ var i = 1
             
                 display.textContent = hours + ":" + minutes + ":" + seconds;
             
-                if (--timer == 0) {
-                   
-                    $('#ext-version').remove();
-        var idSoal = localStorage.getItem('key');   
-        var soal = [];
-
-        $('input:checked').each(function () { 
-            var data   = $(this).val();
-                jwb    = data.substring(0,1);
-                id = data.substring(1); 
-
-            var data = {
-                soal: idSoal,
-                id  : id,
-                jwb : jwb
-            }
-            soal.push(data); 
-         })
+            if (--timer == 0) {
+                $('#ext-version').remove();
+                var idSoal = localStorage.getItem('key');   
+                var soal = [];
+                $('input:checked').each(function () { 
+                var data   = $(this).val();
+                    jwb    = data.substring(0,1);
+                    id     = data.substring(1); 
+                var data = {
+                    soal: idSoal,
+                    id  : id,
+                    jwb : jwb
+                    }
+                    soal.push(data); 
+            })
             soal = JSON.stringify(soal);
-            console.log(soal);
+            // console.log(soal);
             $.ajax({
                 type: "POST",
                 url: "https://ancient-brook-33034.herokuapp.com/jawab.php",
                 data: soal,
                 success: function (response) {
-                    console.log(response);
-                    
+                
                    var data = JSON.parse(response);
                    var total_soal    = data['total_soal'];
                    var hasil         = data['hasil'];
@@ -271,9 +263,7 @@ var i = 1
                    window.location.href = 'hasil.html'
                        
                 }
-            });   
-
-                    
+            });      
                     }
             }, 1000);
         }
@@ -303,8 +293,6 @@ var i = 1
                 url: "https://ancient-brook-33034.herokuapp.com/jawab.php",
                 data: soal,
                 success: function (response) {
-                    console.log(response);
-                    
                    var data = JSON.parse(response);
                    var total_soal    = data['total_soal'];
                    var hasil         = data['hasil'];
@@ -315,9 +303,7 @@ var i = 1
                    localStorage.setItem("soal_dijawab",soal_dijawab);
                    localStorage.setItem("jawaban_benar",jawaban_benar);
                    localStorage.setItem("total_soal",total_soal);
-                    
-                   window.location.href = 'hasil.html'
-                       
+                   window.location.href = 'hasil.html'                       
                 }
             });   
         })

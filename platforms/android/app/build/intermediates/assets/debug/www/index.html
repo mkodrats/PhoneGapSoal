@@ -110,7 +110,7 @@
 
         if (soal != null && soal1 != null && soal2 != null) {
             alert('All Course Completed')
-            localStorage.clear();
+            window.localStorage.clear();
         }
       
         // console.log(soal);
@@ -130,7 +130,7 @@
             if (soal == 'indonesia') {
                 $('#indonesia').attr('disabled', true)
             }
-            if (soal1 == 'inggris') {
+            if (soal1 == 'inggris') { 
                 $('#inggris').attr('disabled', true)
             }
             if (soal1 == 'matematika') {
